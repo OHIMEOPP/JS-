@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-git指令.txt
 index.html
 package-lock.json
 package.json

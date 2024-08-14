@@ -36,7 +36,7 @@ const rs = fs.createReadStream('./信.txt','utf-8');
 rs.on('data',chunk =>{
   mytxt = chunk;
   console.log(mytxt);
-  console.log('讀取完成');
+  console.log('讀取完成ye');
   return;
 })
 

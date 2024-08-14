@@ -84,7 +84,7 @@ rs.on('data',chunk =>{
 // })
 
 //os
-console.log(os.cpus);
+console.log(os.arch);
 
 const array = [{name:'jack', bir:'20', id:1},{name:'tom', bir:'32', id:2}];
 

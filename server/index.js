@@ -3,7 +3,7 @@ import express from "express";
 import cors from 'cors'; // 引入 CORS
 import fs from 'fs';//載入fil3 system
 import { Console } from "console";
-import { x } from './http.js';
+// import { x } from './http.js';
 import os from 'os';//載入作業系統(os)模組
 
 const app = express();
@@ -32,10 +32,10 @@ let mytxt = '';
 // });
 
 //讀取檔案 2
-const rs = fs.createReadStream('./告白信.txt');
+const rs = fs.createReadStream('./信.txt','utf-8');
 rs.on('data',chunk =>{
-  mytxt = chunk.toString();
-  // console.log(mytxt);
+  mytxt = chunk;
+  console.log(mytxt);
   console.log('讀取完成');
   return;
 })
@@ -49,7 +49,7 @@ rs.on('data',chunk =>{
 // })
 
 //檔案改名
-// fs.rename('./座右銘.txt','./告白信.txt',err => {
+// fs.rename('./座右銘.txt','./信.txt',err => {
 //   if(err){
 //     console.log(err);
 //   }
@@ -68,7 +68,7 @@ rs.on('data',chunk =>{
 //0282280188
 
 //檔案狀態
-// fs.stat('./告白信.txt',(err,data) =>{
+// fs.stat('./信.txt',(err,data) =>{
 //   if(err){
 //     console.log(err);
 //     return;
@@ -84,7 +84,7 @@ rs.on('data',chunk =>{
 // })
 
 //os
-console.log(os.arch);
+// console.log(os.arch);
 
 const array = [{name:'jack', bir:'20', id:1},{name:'tom', bir:'32', id:2}];
 

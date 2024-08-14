@@ -1,0 +1,79 @@
+-------字串-------
+
+//使用strlen() 方法，取得()中 字元長度
+strlen("字串")
+
+//使用mb_strlen()，取得字數長度
+mb_strlen("包含其他語言的字串")
+
+//使用substr()，取得字串中部分文元
+substr("字串", 從第n個, 取n個字 )
+
+//使用mb_substr()，取得中文字串中部分文字
+mb_substr("字串", 從第n個, 取n個字)
+
+//使用str_replace()，把字串中的文字置換
+str_replace("找到字串", "替換上的字串", "整條字串")
+
+//使用strtoupper()，把字串轉大寫
+strtoupper("英文字串")
+
+//使用strtolower()，把字串轉小寫
+strtolower("英文字串");
+
+//使用strpos()，尋找字串中的字元位置
+strpos("字串","要尋找的字元")
+*若沒有會回傳flase，並不顯示
+
+//使用mb_strpos()，尋找字串中的字的位置
+mb_strpos("字串","要尋找的字")
+*若沒有會回傳flase，並不顯示
+
+-------數字-------
+
+//使用round()，顯示包含整數的小數點後n位
+round(數字, 要顯示的位數)
+
+//使用rand()，於兩個數中取亂數
+rand(數字,數字)
+
+-------陣列-------
+
+//使用array_push()，增加陣列元素
+array_push(陣列名稱, 要加的元素(1),要加的元素(2), ...)
+
+//使用count()，顯示陣列資料數量
+count(陣列名稱)
+
+//使用sort()與rsort()，將陣列由小到大排列，由大到小
+sort(陣列名稱)
+rsort(陣列名稱)
+
+//使用join()，將陣列元素用指定字元分隔並呈現
+join("字元",陣列名稱)
+
+//使用sort()，排序
+sort(陣列名稱)
+
+-------資料暫存-------
+
+//使用setcookie()，提供資料在一定一間的暫存，需要轉跳下一個檔案後才能使用
+setcookie("變數名稱","變數值",time()+60*60*24)
+
+echo $_cookie['變數名稱']
+
+//使用time()，時間戳記，加上數字=>當下時間+n秒
+(time()+ 數字)
+
+//使用session()，可以馬上使用，並暫存在伺服器裡
+//使用session開頭移動要加session_start()
+session_start();
+$_SESSION["變數名稱"] = 變數值 //取用
+
+-------Ajex-------
+
+-------資料庫-------
+增加資料種類
+ALTER TABLE `資料庫名稱` ADD `資料種類` VARCHAR(30) NULL AFTER `資料種類`;
+例:
+ALTER TABLE `tag_data` ADD `type` VARCHAR(30) NULL AFTER `creat_user_id`;
